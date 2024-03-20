@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    h1{
+        width: 30%;
+        background-color: rgb(79, 133, 203);
+        height: 10vh;
+        margin: auto;
+        padding-top: 40px;
+            }
+    section{
+        width:30%;
+        height: 60vh;
+        padding-top: 30px;
+        border:solid 1px rgb(79, 133, 203);
+    }
+    button{
+        background-color: rgb(79, 133, 203);
+        width: 20%;
+        border-radius: 70px;
+        height: 5vh;
+    }
+    .password-container {
+      position: relative;
+      margin-left: 20px;
+    }
+    
+    .eye-icon {
+        
+     cursor: pointer;
+    }
+    
+</style>
+<body>
+    <form action="connect.php" method="post">
+        <center>
+            <h1>Registration Form</h1>
+            <section>
+            <label>First Name</label><br>
+            <input type="text" name="firstname">
+            <br>
+            <br>
+            <label>Last Name</label><br>
+            <input type="text" name="lastname">
+            <br><br>
+            <label>Gender</label><br>
+            <input type="radio" name="gender" value="m">Male  
+            <input type="radio" name="gender" value="f">Female  
+            <input type="radio" name="gender" value="o">Others 
+            <br><br>
+            <label>Email</label><br>
+            <input type="text" name="email">
+            <br><br>
+            <label for="password">Password:</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password">
+          <span id="showPasswordIcon" class="eye-icon">👁️</span>
+        </div>
+            <br><br>
+            <label>Phone Number</label><br>
+            <input type="text" name="number">
+            <br><br>
+            <button>Submit</button>
+            </section>
+
+        </center>
+    </form>
+</body>
+<script>
+    document.getElementById("showPasswordIcon").addEventListener("click", function() {
+      var passwordField = document.getElementById("password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        this.textContent = "👁️";
+      } else {
+        passwordField.type = "password";
+        this.textContent = "👁️";
+      }
+    });
+  </script>
+</html>
